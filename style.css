@@ -75,3 +75,14 @@ body{
 .grey{
     background-color: #a6a6a6;
 }
+
+.display{
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.resultField{
+    font-size: 3rem;
+    padding-inline: 1.3vw;
+}
