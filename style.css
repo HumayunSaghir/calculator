@@ -66,6 +66,8 @@ body{
 
 .button{
     background-color: #333333;
+    cursor: pointer;
+    font-size: 1.2rem;
 }
 
 .orange{

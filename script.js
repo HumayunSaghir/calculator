@@ -20,8 +20,45 @@ let zero = document.querySelector('.zero')
 let dot = document.querySelector('.dot')
 let equal = document.querySelector('.equal')
 
-// console.table([resultField, ac, del, percentage, slash,
-//     seven, eight, nine, multiply, four, five, six, minus,
-//     one, two, three, plus, zero, dot, equal
-// ])
+// Core Functionalities
 
+// Main Expression String
+let expression = ''
+
+
+// Add event listners on number buttons.
+let allNumberButtons = document.querySelectorAll('.numberButton')
+
+allNumberButtons.forEach( (item) => {
+    console.log(item.addEventListener('click', (e) => {
+        expression += item.innerText
+        console.log(expression)
+    }))
+} )
+
+// Adding event loops on operation buttons.
+// let allOperations = document.querySelectorAll('.operation')
+// allOperations.forEach( (item) => {
+//     item.addEventListener('click', (e) => {
+//         expression += item.innerText
+//         console.log(expression)
+//     })
+// } )
+
+// Adding functionality of ac button
+ac.addEventListener('click', (e) => {
+    expression = ""
+    resultField.innerText = ""
+})
+
+// Functionality of calculation the result.
+equal.addEventListener('click', () => {
+    let result = undefined
+    try{
+        result = eval(expression)
+        resultField.innerText = result
+    }
+    catch{
+        resultField.innerText = "Invalid Input"
+    }
+})
