@@ -1,0 +1,23 @@
+/* For standard mobile phones */
+@media (min-width:321px) and (max-width:600px) {
+    body{
+        background-color: black;
+        -webkit-tap-highlight-color:transparent;
+    }
+    .outerbox{
+        width: 100vw;
+    }
+
+    .resultField{
+        font-size: 5rem;
+    }
+
+    .button{
+        flex-basis: 20vw;
+        font-size: 2rem;
+    }
+
+    .zero{
+        flex-basis: 45vw;
+    }
+}

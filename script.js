@@ -33,6 +33,7 @@ allNumberButtons.forEach( (item) => {
     console.log(item.addEventListener('click', (e) => {
         expression += item.innerText
         console.log(expression)
+        resultField.innerText = expression
     }))
 } )
 
@@ -57,8 +58,21 @@ equal.addEventListener('click', () => {
     try{
         result = eval(expression)
         resultField.innerText = result
+        expression = String(result) 
     }
     catch{
         resultField.innerText = "Invalid Input"
+    }
+})
+
+// Functionality of delete button
+del.addEventListener('click', (e)=>{
+    // Reduction of expression.
+    if(expression.length >= 1){
+        expression = expression.slice(0, expression.length - 1)
+        resultField.innerText = expression
+    }  
+    else{
+        return
     }
 })
