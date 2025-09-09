@@ -47,3 +47,30 @@
         flex-basis: 45vw;
     }
 }
+
+/* Not available on the small tablets */
+@media (min-width:601px) and (max-width:768px) {
+    .outerbox{
+        display: none;
+    }
+
+    .notoptimized{
+        font-size: 2rem;
+        text-align: center;
+        display: block;
+    }
+}
+
+/* Not available on the standard tablets */
+@media (min-width:769px) and (max-width:1024px) {
+    .outerbox{
+        display: none;
+    }
+
+    .notoptimized{
+        display: block;
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+}
